@@ -49,4 +49,4 @@ FROM Warehouse.StockItems
 ORDER BY RecommendedRetailPrice-UnitPrice
 ```
 ## Final Words
-Navigating the database took the longest time for me, finding the table which contained the values needed as the biggest database I have worked in before was much smaller. In total I spent around 1 1/2 to complete all 4 challenges and an additional 1/2 hour to document everything.
+Navigating the database took the longest time for me, finding the table which contained the values needed as the biggest database I have worked in before was much smaller. In total I spent around 1 1/2 to 2 hours once downloaded the .bak file to complete all 4 challenges and an additional 30 minutes to document everything on GitHub.
