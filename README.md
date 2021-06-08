@@ -48,5 +48,5 @@ SELECT RecommendedRetailPrice-UnitPrice [GrossProfit], StockItemName
 FROM Warehouse.StockItems
 ORDER BY RecommendedRetailPrice-UnitPrice
 ```
-#Final Words
+## Final Words
 Navigating the database took the longest time for me, finding the table which contained the values needed as the biggest database I have worked in before was much smaller. In total I spent around 1 1/2 to complete all 4 challenges and an additional 1/2 hour to document everything.
