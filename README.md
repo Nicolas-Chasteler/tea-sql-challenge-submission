@@ -1,5 +1,5 @@
 # TEA-SQL-Challenge-Submission
-#Challenge 1
+## Challenge 1
 I wrote a query which returns a table sorted by year then month of the sum of transactions from Sales.CustomerTransactions. I believe the negative sales values with no invoice ID should not have been counted so I removed them.
 ```
 /* Challenge 1, Data needed to graph total monthly sales over time.*/
@@ -10,7 +10,7 @@ WHERE InvoiceID IS NOT NULL
 GROUP BY YEAR(TransactionDate), MONTH(TransactionDate)
 ORDER BY YEAR(TransactionDate), MONTH(TransactionDate) 
 ```
-#Challenge 2
+## Challenge 2
 I wrote a query to add the category name to the CustomerTransactions table, sorted by year, quarter, then category. Again I removed the rows with no invoice ID.
 By manually calculating between Q1 2016 and Q1 2015 in excel from the resulting table, The biggest growth is in the Computer Store category with a revenue growth of 19.94%.
 ```
@@ -26,7 +26,7 @@ WHERE InvoiceID IS NOT NULL
 GROUP BY YEAR(TransactionDate), DATEPART(QUARTER, TransactionDate), CustomerCategoryName
 ORDER BY YEAR(TransactionDate), DATEPART(QUARTER, TransactionDate), CustomerCategoryName
 ```
-#Challenge 3
+## Challenge 3
 This query uses the Purchasing.SupplierTransactions file to count of when OutsandingBalance is above 0, or equal to 0 and find the average transaction amount.
 Similar to before, I removed all transactions without a purchaseorderID
 ```
@@ -39,7 +39,7 @@ ON Purchasing.SupplierTransactions.SupplierID = Purchasing.Suppliers.SupplierID
 WHERE PurchaseOrderID IS NOT NULL
 GROUP BY SupplierName
 ```
-#Challenge 4
+## Challenge 4
 I used the UnitPrice and RecommendedRetailPrice to find the Gross Profit and ordering from least to greatest profit.
 By looking at the first entry, the lowest gross profit is 0.33 from '3 kg Courier post bag (White) 300x190x95mm', the greatest profit is 940.01 from 'Air cushion machine (Blue)', and the median can be calculated from dividing the total entries by 2 and going to that entry which is 8.91 from "The Gu" red shirt XML tag t-shirt (White) 5XL/6XL since the total number was odd.
 ```
